@@ -1,2 +1,3 @@
 # 22istoomany
-All of the config, system, index files for 22istoomany.com
+The config, system and web-site files for 22istoomany.com
+ 
