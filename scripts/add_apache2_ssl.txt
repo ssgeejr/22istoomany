@@ -1,1 +1,41 @@
+https://www.digitalocean.com/community/tutorials/how-to-create-a-ssl-certificate-on-apache-for-debian-8
+apt-get update
+apt-get install -y apache2
+apt-get upgrade -y openssl
+
 a2enmod ssl
+
+# The default Apache website comes with a useful template for enabling SSL, so we will activate the default website now.
+a2ensite default-ssl
+
+
+service apache2 reload
+
+
+mkdir /etc/apache2/ssl
+
+openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout /etc/apache2/ssl/apache.key -out /etc/apache2/ssl/apache.crt
+/etc/apache2/sites-enabled/default
+ServerAdmin webmaster@localhost
+ServerName example.com:443
+
+/etc/apache2/sites-enabled/default
+ SSLCertificateFile /etc/apache2/ssl/apache.crt
+ SSLCertificateKeyFile /etc/apache2/ssl/apache.key
+
+/etc/apache2/sites-enabled/default-ssl
+<IfModule mod_ssl.c>
+    <VirtualHost _default_:443>
+        ServerAdmin webmaster@localhost
+        ServerName example.com:443
+        DocumentRoot /var/www/html
+
+        . . .
+        SSLEngine on
+
+        . . .
+
+        SSLCertificateFile /etc/apache2/ssl/apache.crt
+        SSLCertificateKeyFile /etc/apache2/ssl/apache.key
+
+openssl s_client -connect your_server_ip:443
