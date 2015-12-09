@@ -1,3 +1,7 @@
 # 22istoomany
-The config, system and web-site files for 22istoomany.com
+The  web-site files, config, hit-counters and charts for 22istoomany.com
+
+If you would like to contribute, please fork the project, make your changes, then do a PR against <your-fork>:<your-branch> and 22istoomany:develop
+
+
  
