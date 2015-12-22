@@ -19,6 +19,10 @@ updateInfo(); // Updates hit info
 	font-size: 24px;
 	font-weight: bold;
 }
+.style4 {
+	color: #000066;
+	font-weight: bold;
+}
 </style>
 </head>
 
@@ -28,6 +32,17 @@ updateInfo(); // Updates hit info
   <tr valign="top">
     <td width="50"><p><img src="vfw_small.png" width="46" height="48" /></p>      </td>
     <td width="970" valign="middle"><span class="style1">22 Is Too Many:  Suicide Awareness</span></td>
+  </tr>
+  <tr valign="top">
+    <td>&nbsp;</td>
+    <td valign="middle">
+      This is the <span class="style4">Veterans Crisis Line</span>
+        <ul>
+        <li>Service members, and their loved ones can call <b>1-800-273-8255</b> and <b>Press 1</b></li>
+        <li>send a text message to <b>838255</b></li>
+        <li>or <a href="http://www.veteranscrisisline.net/ChatTermsOfService.aspx?account=Veterans%20Chat" target="chatOnline">chat online</a></li>
+        </ul>       
+      </p></td>
   </tr>
   <tr>
     <td colspan="2">
